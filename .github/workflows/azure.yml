@@ -27,6 +27,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1.0.1
+    - run: ls
     - name: msbuild
-      run: msbuild SmartHotel360-Website/Source/SmartHotel360.Website.sln
+      run: msbuild /Source/SmartHotel360.Website.sln
 
