@@ -27,6 +27,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1.0.1
+    - name: Setup NuGet.exe for use with actions
+      uses: NuGet/setup-nuget@v1.0.2 
+    - run: nuget restore Source/SmartHotel360.Website.sln
     - name: msbuild
       run: msbuild Source/SmartHotel360.Website.sln
 
